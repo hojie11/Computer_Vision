@@ -9,9 +9,10 @@ class Config:
     # data
     voc_data_dir = 'Detection_Segmentation/VOCdevkit/VOC2007'
     min_size = 600  # image resize
-    max_size = 720 # image resize
-    num_workers = 2
-    test_num_workers = 2
+    max_size = 1000 # image resize
+    num_workers = 4
+    test_num_workers = 4
+    checkpoints = "Detection_Segmentation/Faster_RCNN/checkpoints"
 
     # sigma for l1_smooth_loss
     rpn_sigma = 3.
@@ -48,7 +49,7 @@ class Config:
     load_path = None
 
     caffe_pretrain = False # use caffe pretrained model instead of torchvision
-    caffe_pretrain_path = 'checkpoints/vgg16_caffe.pth'
+    caffe_pretrain_path = 'Detection_Segmentation/Faster_RCNN/checkpoints/vgg16_caffe.pth'
 
     def _parse(self, kwargs):
         state_dict = self._state_dict()

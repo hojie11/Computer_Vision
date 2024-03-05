@@ -200,6 +200,7 @@ class FasterRCNNTrainer(nn.Module):
             for k_, v_ in kwargs.items():
                 save_path += '_%s' % v_
 
+        os.makedirs(save_dir, exist_ok=True)
         save_dir = os.path.dirname(save_path)
         if not os.path.exists(save_dir):
             os.makedirs(save_dir)

@@ -21,8 +21,8 @@ PRN은 patch마다 k개의 **Anchor box**를 정의하여 사용함으로써 문
     <img src="assets/architecture.JPG" width=70% height=70%>
 </p>
 
-1. 입력 이미지로부터 Featuer map을 추출함
-2. 추출한 Feature map은 PRN을 통과해 객체에 대하여 적절한 **Anchor box**를 계산함
+1. 입력 이미지로부터 featuer map을 추출함
+2. 추출한 feature map은 PRN을 통과해 객체에 대하여 적절한 **Anchor box**를 계산함
 3. 1)과 2)의 결과물에 ROI Pooing을 수행하여 모두 같은 크기의 feature map으로 변형함
 4. RCNN 네트워크를 통해 해당 Feature map에 대한 Class와 Bounding box 위치를 계산함
 
@@ -36,6 +36,7 @@ RAM : 128G
 ```
 
 ## 참고
-1. chenyuntc의 github [[page](https://github.com/chenyuntc/simple-faster-rcnn-pytorch.git)]
+1. Faster-RCNN paper [[arxiv](https://arxiv.org/abs/1506.01497)]
+2. chenyuntc의 github [[page](https://github.com/chenyuntc/simple-faster-rcnn-pytorch.git)]
 
-2. sangnekim의 github [[page](https://github.com/sangnekim/faster-rcnn-for-studying)]
+3. sangnekim의 github [[page](https://github.com/sangnekim/faster-rcnn-for-studying)]
