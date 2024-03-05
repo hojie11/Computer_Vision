@@ -4,7 +4,7 @@ Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks �
 기존 Fast RCNN 모델은 Selective search algorithm을 통해 region proposal을 추출하기 때문에 학습 및 Detection 속도가 느리며 Detection 과정이 end to end로 이루어지지 않음</br></br>
 
 Faster RCNN은 Detection 하고자 하는 물체에 대한 후보 영역을 추출하는 네트워크인 Region Proposal Network(PRN)을 도입하여 기존의 문제점을 해결하였음</br>
-PRN은 객체의 영역을 보다 정확하게 추출할 수 있또록 다양한 크기의 **Anchor box(bbox)**를 도입하여, 해당 영역을 RCNN 네트워크에 전달하여 객체의 클래스와 **Anchor box**의 위치를 Prediction함
+PRN은 객체의 영역을 보다 정확하게 추출할 수 있또록 다양한 크기의 **Anchor box**(bbox)를 도입하여, 해당 영역을 RCNN 네트워크에 전달하여 객체의 클래스와 **Anchor box**의 위치를 Prediction함
 
 <p align='center'>
     <img src="assets/architecture.JPG" width=70% height=70%>
