@@ -9,9 +9,9 @@ class Config:
     # data
     voc_data_dir = 'Detection_Segmentation/VOCdevkit/VOC2007'
     min_size = 600  # image resize
-    max_size = 1000 # image resize
-    num_workers = 4
-    test_num_workers = 4
+    max_size = 720 # image resize
+    num_workers = 2
+    test_num_workers = 2
 
     # sigma for l1_smooth_loss
     rpn_sigma = 3.
