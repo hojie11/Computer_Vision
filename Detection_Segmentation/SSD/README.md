@@ -1,5 +1,5 @@
 # SSD
-**SSD**: Single shot multibox detector(2015) 리뷰
+**SSD**: Single shot multibox detector(ECCV Conference 2016) 리뷰
 
 ## 기존 방법의 문제점
 Faster RCNN의 경우에는 Anchor box의 scale, ratio factor에 따라 크기가 결정되기 때문에 Flexibility가 떨어짐
@@ -21,7 +21,7 @@ bounding box의 크기는 **Extra Feature Layers**를 통과하는 **feature map
 $s_k = s_{min} + \frac{s_{max} - s_{min}}{m - 1} (k - 1), k \in [1, m]$
 </center></br>
 
-
+### 학습구조
 SSD의 학습 구조는 다음과 같음
 
 <p align='center'>

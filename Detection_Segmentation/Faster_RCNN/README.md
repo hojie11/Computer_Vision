@@ -1,5 +1,5 @@
 # Faster-RCNN 
-**Faster R-CNN**: Towards Real-Time Object Detection with Region Proposal Networks(2015) 리뷰
+**Faster R-CNN**: Towards Real-Time Object Detection with Region Proposal Networks(ICCV 2015) 리뷰
 
 ## 기존 방법의 문제점
 기존 RCNN 모델은 Selective search algorithm을 통해 region proposal을 추출하기 때문에 학습 및 Detection 속도가 느리며 Detection 과정이 end to end로 이루어지지 않음</br>
@@ -15,6 +15,7 @@ PRN은 patch마다 k개의 **Anchor box**를 정의하여 사용함으로써 문
 다양한 **Anchor box** 중에서 Non-Maximum Suppression(NMS)을 통해 다양한 bounding box에서 confidence score와 IoU score를 계산하여 가장 객체를 잘 담고 있는 box를 선정함</br>
 * 이때 IoU score가 일정값 이하로 낮다면, 다른 오브젝트로 구분하여 Instance Detection이 가능함
 
+### 학습구조
 전체 학습 과정은 아래와 같음
 
 <p align='center'>
