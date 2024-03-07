@@ -12,7 +12,7 @@ class Config:
     max_size = 1000 # image resize
     num_workers = 4
     test_num_workers = 4
-    checkpoints = "Detection_Segmentation/Faster_RCNN/checkpoints"
+    # checkpoints = "Detection_Segmentation/Faster_RCNN/checkpoints"
 
     # sigma for l1_smooth_loss
     rpn_sigma = 3.

@@ -35,6 +35,16 @@ GPU : NVIDIA RTX A6000(VRAM 48G)
 RAM : 128G
 ```
 
+학습 결과는 다음의 사진과 같이 출력되었음 </br>
+하단에 2개의 RGB Image가 있는데 왼쪽이 Ground Truth 오른쪽이 Predict한 결과임</br>
+Ground Truth와 같이 사람과 의자를 잘 검출한 것을 볼 수 있음</br>
+
+<p align='center'>
+    <img src="assets/result.jpg", width=70% heigth=70%>
+</p>
+
+기타 예제는 .ipynb 파일을 참고 [예제1](plot_image_example.ipynb.ipynb) [예제2](demo.ipynb)
+
 ## 참고
 1. Faster-RCNN paper [[arxiv](https://arxiv.org/abs/1506.01497)]
 2. chenyuntc의 github [[page](https://github.com/chenyuntc/simple-faster-rcnn-pytorch.git)]
