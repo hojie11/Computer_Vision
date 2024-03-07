@@ -43,7 +43,7 @@ Ground Truth와 같이 사람과 의자를 잘 검출한 것을 볼 수 있음</
     <img src="assets/result.jpg", width=70% heigth=70%>
 </p>
 
-기타 예제는 .ipynb 파일을 참고 [예제1](plot_image_example.ipynb.ipynb) [예제2](demo.ipynb)
+기타 예제는 .ipynb 파일을 참고 [예제1](plot_image_example.ipynb) [예제2](demo.ipynb)
 
 ## 참고
 1. Faster-RCNN paper [[arxiv](https://arxiv.org/abs/1506.01497)]
