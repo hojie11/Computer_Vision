@@ -47,8 +47,7 @@ YOLO 모델의 구조는 GoogleNet를 변형하여 사용하였으며, 448x448 �
     <img src="assets/loss.JPG" widht=70% height=70%>
 </center>
 
-가장 위의 2줄은 bounding box의 x,y 좌표 그리고 width, height에 대한 Loss를 계산하는 식이며, 다음 2줄은 객체와 배경에 대한 confidence score를 계산하는 식</br>
-마지막 줄은 예측한 클래스와 실제 클래스를 비교하는 식
+가장 위의 2줄은 bounding box의 x,y 좌표 그리고 width, height에 대한 Loss를 계산하는 식이며, 다음 2줄은 객체와 배경에 대한 confidence score를 계산하는 식, 마지막 줄은 예측한 클래스와 실제 클래스를 비교하는 식
 
 ## 학습
 ### 학습환경
