@@ -22,15 +22,32 @@ $s_k = s_{min} + \frac{s_{max} - s_{min}}{m - 1} (k - 1), k \in [1, m]$
 </center></br>
 
 ### 학습구조
-SSD의 학습 구조는 다음과 같음
+SSD의 학습 구조는 다음과 같음</br>
 
 <p align='center'>
     <img src="assets/architecture.JPG", width=70% heigth=70%>
 </p>
 
-1. 입력 이미지를 입력으로 VGG 모델을 통해 feature map을 생성하여 **Extra Feature Layers**로 전달함</br>
+1. 입력 이미지를 입력으로 Pre-trained VGG 16 모델의 Fully Connected layer 전까지만 사용하여 feature map을 생성하며, **Extra Feature Layers**로 전달함</br>
 2. **Extra Feature Layers**는 입력되는 feature map의 채널 수와 동일한 3x3 filter를 사용하여 feature를 추출하며, 각 위치에서 k개의 **bounding box** 집합을 생성함</br>
 3. 이후, Non-Maximum Suppression(NMS) 방법을 통해 객체를 잘 표현하고 있는 bounding box를 계산함</br>
+
+### Loss 함수
+<p align='center'>
+    <img src="assets/loss.JPG", width=70% heigth=70%>
+</p>
+bounding box의 위치와 confidence score를 weighted sum하여 전체 loss 함수를 설정함</br>
+
+$L_{conf}$는 클래스별 confidence score에 대한 소프트맥스 loss로 계산하며, N은 매칭된 bounding box의 개수임
+    => N이 0일 경우에는 $L_{conf}$를 0으로 설정
+<p align='center'>
+    <img src="assets/l_conf.JPG", width=70% heigth=70%>
+</p>
+
+$L_{loc}$는 ground truth box와 prdicted box에 대한 중심 좌표$(cx, \ cy)$, 너비$(w)$, 높이$(h)$ 등에 대하여 smooth l1 loss를 통해 계산함
+<p align='center'>
+    <img src="assets/l_loc.JPG", width=70% heigth=70%>
+</p>
 
 ## 학습
 ### 학습환경
