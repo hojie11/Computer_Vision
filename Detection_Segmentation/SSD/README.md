@@ -18,7 +18,9 @@ VGG 모델의 Fully Connected Layer를 제외하여 입력 이미지에 대한 f
 bounding box의 크기는 **Extra Feature Layers**를 통과하는 **feature map**의 개수 $m$, scale factor($s_{min}$, $s_{max}$)로 결정됨</br>
 
 <center>
-$s_k = s_{min} + \frac{s_{max} - s_{min}}{m - 1} (k - 1), k \in [1, m]$
+
+$$s_k = s_{min} + \frac{s_{max} - s_{min}}{m - 1} (k - 1), k \in [1, m]$$
+
 </center></br>
 
 ### 학습구조
